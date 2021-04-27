@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in object_list %}
+    <div class="post_entry">
+        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <p>{{ post.body }}</p>
+
+    {% if user.is_authenticated %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.comment }}
+        <input type='submit' value='Send Comment' />
+    </form>
+            <p> "{{post.comment}}" </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+{% endblock content %}

@@ -1,0 +1,40 @@
+header h1 a {
+    color:rgb(12, 129, 90);
+    text-decoration: none;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+}
+header {
+    border-bottom: 1px solid;
+    margin-bottom: 2rem;
+    display: flex;
+}
+.nav-left {
+    margin-right: auto;
+}
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+}
+.post-entry {
+    margin-bottom: 2rem;
+}
+.post-entry h2 {
+    margin: 0.5rem 0;
+}
+.post-entry a, 
+.post-entryh2 a:visited {
+    color:rgb(212, 97, 193);
+    text-decoration: rgb(163, 27, 141);
+}
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+.post-entry h2 a:hover {
+    color: rgb(163, 27, 141);
+
+}

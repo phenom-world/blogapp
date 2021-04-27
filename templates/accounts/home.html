@@ -1,0 +1,79 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    
+        
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+body{
+    background: rgb(255, 255, 255) ;
+            font-family: "Noto Sans JP", sans-serif;
+}
+.wrapper{
+    background: #690061;
+    color: #fff;
+    
+}
+h1{
+    line-height: 1.8;
+}
+    .jumbotron {
+        padding: 4rem 2rem;
+        background-color: var(--bs-light);
+        border-radius: .3rem;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-info bg-white" style="height: 50px;">
+        <h4 style="font-size: 1.5rem; color:#690061; font-family: 'Noto Sans JP', cursive; "><i
+                class="fas fa-clipboard-list" style="margin: 0 0.3rem;"></i>MY-TODO-APP </h4>
+            {% if user.is_authenticated == True %}
+        <span><a class="" href="{% url 'logoutPage' %}"
+                style="margin-right: 15px; color: #690061; text-decoration: none;">Logout</a></span>
+                {% endif %}
+    </nav>  
+    <div class="container mt-4">
+        <div class="jumbotron text-center">
+            <h1>Keep track of your daily Todos and long term project with MyTodoApp.
+</h1>
+            <p class="lead"></p>
+            {% if user.is_authenticated == False %}
+            <a href="{% url 'loginPage' %}" class="btn btn-primary btn-lg">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg">SignUp</a>
+            {% else %}
+            <a href="{% url 'index' %}" class="btn btn-primary btn-lg">Go to your Dashboard</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="wrapper" >
+        <div class="container" ">
+            <div class="row">
+                <div class="col-md-6" style="padding: 1rem;">
+                    <div class="heading text-center">
+                        <h2 style="font-family: 'Noto Sans JP', sans-serif;"><i style="margin-right: 0.5rem"
+                                class="fas fa-tasks"></i>Daily Todos</h2>
+                    </div>
+                    <div style="font-family: 'Ubuntu', sans-serif; margin-top: 0.75rem;" class="details">
+                        <p>
+                            Create a list of daily tasks you wish to perform and start working on the tasks.
+                            Also allows you to delete and update/edit an existing task and also mark tasks you have
+                            completed.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6" style="padding: 1rem;">
+                    <div class="heading text-center">
+                        <h2 style="font-family: 'Noto Sans JP', sans-serif;"><i style="margin-right: 0.5rem"
+                                class="fas fa-project-diagram"></i>Projects</h2>
+                    </div>
+                    <div style="font-family: 'Ubuntu', sans-serif; margin-top: 0.75rem;" class="details">
+                        <p>
+                            Create longterm projects with due date and also break projects to smaller tasks with completion
+                            time and start working.
+                            Also allows you to delete and update subtasks when neccessary and mark subtasks as done
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
