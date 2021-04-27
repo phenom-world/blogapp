@@ -25,7 +25,7 @@ SECRET_KEY = '^y)e2)ja^e^c=ct5%a01)9g!*0q=(f8s$dn(&(ftt3=&r8(2h1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ublogt.herokuapp.com", '127.0.0.1']
+ALLOWED_HOSTS = ["ubblogt.herokuapp.com", '127.0.0.1']
 
 
 # Application definition
