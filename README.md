@@ -3,30 +3,35 @@
 
 This is a simple Django CRUD application that allows to create, retrieve, update and delete a post. If you are new to the filed of of  Django web development, this is a good way to start.
 
-The inerface is as shown
-![CRUD](int_face.png)
+It provides login, register and logout functionalities and also ability for a user to comment on the post
+### Setup
+To get this repository, run the following command inside your git enabled terminal
 
-To get it running on your local machine, follow the steps below:
-
-1. Run the commands below in your terminal:
-```bash
-$ git clone https://github.com/john-bagiliko/CRUD.git 
 ```
-2. 
-```bash
-$ cd CRUD
+$ git clone https://https://github.com/tijjken/blogapp.git
 ```
-3. Install the requirements with the command below:
+You will need django to be installed in you computer to run this app. Head over to https://www.djangoproject.com/download/ for the download guide
 
-```bash
-$ pip install -r requirements.txt
+Once you have downloaded django, go to the cloned repo directory and run the following command
+
 ```
-4. Run the development server with
+$ python manage.py makemigrations
+```
 
-```bash
+This will create all the migrations file (database migrations) required to run this App.
+
+Now, to apply this migrations run the following command
+```
+$ python manage.py migrate
+```
+
+That was pretty simple, right? Now let's make the App live. We just need to start the server now and then we can start using our simple Blog App. Start the server by following command
+
+```
 $ python manage.py runserver
 ```
 
-5. Launch your browser and navigate to http://localhost:8000/
+### visit http://127.0.0.1:8000 to start the App
 
-6. Or click on the link https://ubblogt.herokuapp.com/ to go the app
+### You can visit https://ubblogt.herokuapp.com/
+
